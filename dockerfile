@@ -4,5 +4,6 @@ WORKDIR /app
 
 COPY tp1devopps.py .
 
+RUN pip install requests
 
 CMD ["python", "tp1devopps.py"]
