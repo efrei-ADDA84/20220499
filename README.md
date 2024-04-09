@@ -8,7 +8,7 @@ set LAT=31.2504
 set LONG=-99.2506
 set API_KEY=31220f0006c68573ef6356f764a483a9
 
-poue executer le code :
+pour executer le code :
 
 python tp1devopps.py
 
