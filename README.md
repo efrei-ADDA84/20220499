@@ -49,11 +49,29 @@ J'ai ensuite commit mon code sur GitHub
 Fin ReadMe
 
 
-readmetp2
+Readmetp2
 Ce projet vise à configurer un workflow GitHub Actions pour transformer un wrapper Python en une API Flask, construire automatiquement une image Docker et la publier sur Docker Hub à chaque push sur GitHub.
 
 J'ai premièrement configuré un workflow GitHub Action pour automatiser la construction et la publication d'une image Docker.
-Pour cela j'ai créer 
+J'ai créé un docker-build.yaml pour mettre à jour l'image docker dès qu'on push sur github.
+J'ai modifié les settings sur git hub pour y ajouter mes ID et password Dockerhub.
+
+
+Test de l'API, dans un cmd : 
+docker run -p 8081:8081 --env API_KEY=190cfca07aff8b6a629657b083d72998 mattias937/20220499
+
+Et dans un autre cmd :
+curl "http://localhost:8081/?lat=5.902785&lon=102.754175"
+
+ce qui renvoie : 
+{"description":"overcast clouds","temperature":29.26}
+
+J'ai ensuite fait le bonus en ajoutant hadolint au workflow github.
+
+Fin read me tp2.
+
+
+
 
 
 
