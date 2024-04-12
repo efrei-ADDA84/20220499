@@ -16,6 +16,5 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          file: C:\Users\matti\OneDrive\Documents\20220499
           push: true
           tags: mattias937/20220499:latest
