@@ -1,5 +1,8 @@
+from flask import Flask, request, jsonify
 import os
 import requests
+
+app = Flask(__name__)
 
 def get_weather(latitude, longitude, api_key):
     url = f"http://api.openweathermap.org/data/2.5/weather?lat={latitude}&lon={longitude}&appid={api_key}&units=metric"
@@ -10,22 +13,23 @@ def get_weather(latitude, longitude, api_key):
     else:
         return None
 
-def main():
-    latitude = os.environ.get("LAT")
-    longitude = os.environ.get("LONG")
-    api_key = os.environ.get("API_KEY")
+@app.route('/')
+def weather():
+    latitude = request.args.get('lat')
+    longitude = request.args.get('lon')
+    api_key = os.environ.get('API_KEY')
 
     if not all([latitude, longitude, api_key]):
-        print("Veuillez fournir les valeurs de LAT, LONG et API_KEY dans les variables d'environnement.")
-        return
+        return jsonify({'error': 'Missing parameters'}), 400
 
     weather_data = get_weather(latitude, longitude, api_key)
     if weather_data:
-        print("Météo actuelle:")
-        print(f"Température: {weather_data['main']['temp']} °C")
-        print(f"Conditions météorologiques: {weather_data['weather'][0]['description']}")
+        return jsonify({
+            'temperature': weather_data['main']['temp'],
+            'description': weather_data['weather'][0]['description']
+        }), 200
     else:
-        print("Échec de la récupération des données météorologiques.")
+        return jsonify({'error': 'Failed to fetch weather data'}), 500
 
-if __name__ == "__main__":
-    main()
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=8081)
