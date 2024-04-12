@@ -1,4 +1,4 @@
-READ ME ALVAREZ MATTIAS
+READ ME tp1 ALVAREZ MATTIAS
 
 Création du wrapper :
 
@@ -47,3 +47,36 @@ docker run --rm -i hadolint/hadolint < Dockerfile
 J'ai ensuite commit mon code sur GitHub 
 
 Fin ReadMe
+
+
+readmetp2
+Ce projet vise à configurer un workflow GitHub Actions pour transformer un wrapper Python en une API Flask, construire automatiquement une image Docker et la publier sur Docker Hub à chaque push sur GitHub.
+
+J'ai premièrement configuré un workflow GitHub Action pour automatiser la construction et la publication d'une image Docker.
+Pour cela j'ai créer 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
