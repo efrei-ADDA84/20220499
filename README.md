@@ -66,8 +66,6 @@ curl "http://localhost:8081/?lat=5.902785&lon=102.754175"
 ce qui renvoie : 
 {"description":"overcast clouds","temperature":29.26}
 
-J'ai ensuite fait le bonus en ajoutant hadolint au workflow github.
-
 Fin read me tp2.
 
 
