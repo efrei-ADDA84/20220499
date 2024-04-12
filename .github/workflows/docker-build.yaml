@@ -24,4 +24,4 @@ jobs:
           context: .
           file: ./path/to/Dockerfile
           push: true
-          tags: username/repository:tag
+          tags: mattias937/20220499:latest
