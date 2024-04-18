@@ -27,9 +27,7 @@ jobs:
         context: . 
         file: ./Dockerfile 
         push: true 
-        tags: ${{ secrets.REGISTRY_LOGIN_SERVER }}/20220499:v1 
-      env: 
-        OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }} 
+        tags: ${{ secrets.REGISTRY_LOGIN_SERVER }}/20220499 
     # - name: Run Hadolint 
     #   uses: hadolint/hadolint-action@v1.6.0
     #   with:
@@ -52,11 +50,11 @@ jobs:
       with: 
         resource-group: ADDA84-CTP 
         dns-name-label: devops-20220499 
-        image: ${{ secrets.REGISTRY_LOGIN_SERVER }}/20220499:v1 
+        image: ${{ secrets.REGISTRY_LOGIN_SERVER }}/20220499 
         name: 20220499 
         location: 'germanynorth' 
         registry-login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }} 
         registry-username: ${{ secrets.REGISTRY_USERNAME }} 
         registry-password: ${{ secrets.REGISTRY_PASSWORD }} 
-        secure-environment-variables: OPENWEATHER_API_KEY=${{ secrets.OPENWEATHER_API_KEY }} 
+        secure-environment-variables: API_KEY=${{ secrets.OPENWEATHER_API_KEY }} 
 
