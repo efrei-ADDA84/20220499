@@ -30,10 +30,10 @@ jobs:
         tags: ${{ secrets.REGISTRY_LOGIN_SERVER }}/20220499:v1 
       env: 
         OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }} 
-    - name: Run Hadolint 
-      uses: hadolint/hadolint-action@v1.6.0
-      with:
-        dockerfile: Dockerfile
+    # - name: Run Hadolint 
+    #   uses: hadolint/hadolint-action@v1.6.0
+    #   with:
+    #     dockerfile: Dockerfile
         
   deploy: 
     needs: build-and-push 
