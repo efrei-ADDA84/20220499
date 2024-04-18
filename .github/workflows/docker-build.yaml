@@ -54,7 +54,7 @@ jobs:
         dns-name-label: devops-20220499 
         image: ${{ secrets.REGISTRY_LOGIN_SERVER }}/20220499:v1 
         name: 20220499 
-        location: 'francecentral' 
+        location: 'germanynorth' 
         registry-login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }} 
         registry-username: ${{ secrets.REGISTRY_USERNAME }} 
         registry-password: ${{ secrets.REGISTRY_PASSWORD }} 
