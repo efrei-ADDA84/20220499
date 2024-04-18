@@ -86,6 +86,18 @@ J'ai donc obtenu le resultat suivant :
 
 {"description":"overcast clouds","temperature":29.22}
 
+
+
+Avantages de l'utilisation de GitHub Actions pour le déploiement :
+
+Automatisation continue : GitHub Actions permet d'automatiser le déploiement dès qu'un changement est poussé vers le dépôt, assurant un déploiement rapide et régulier sans intervention manuelle.
+
+Intégration directe dans le flux de développement : Le déploiement via GitHub Actions s'intègre directement au cycle de vie du code, ce qui permet une gestion efficace du déploiement au sein du processus de développement.
+
+Traçabilité et historique des déploiements : Chaque déploiement déclenché par GitHub Actions est enregistré et traçable, offrant ainsi une visibilité complète sur les versions déployées et les actions effectuées.
+
+
+
 Fin read me tp3
 
 
