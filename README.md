@@ -69,6 +69,24 @@ ce qui renvoie :
 Fin read me tp2.
 
 
+README TP3 
+
+Modification du fichier docker-build.yaml : Ajout du code permettant de push l'image à chaque nouveau commit sur ACR.
+
+Changement de port sur le code coté API, ancier port : 8081, nouveau port :80
+
+Après avoir push le code sur GitHib on test de l'API et déployé sur Azure : 
+Executez le code suivant sur un CMD:
+
+curl "http://devops-20220499.germanynorth.azurecontainer.io/?lat=5.902785&lon=102.754175"
+
+j'ai changé la "location" en remplaçant france central par germany north car j'ai rencontré un problème de limite de quotas.
+
+J'ai donc obtenu le resultat suivant :
+
+{"description":"overcast clouds","temperature":29.22}
+
+Fin read me tp3
 
 
 
