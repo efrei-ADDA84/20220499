@@ -1,3 +1,43 @@
+ReadmeTP4 : 
+Pour pouvoir créer une machine virtuelle Azure il faut préalablement installer terraform et Azure CLI.
+
+Création d'un répertoire pour le projet TP4.
+
+Création des differents fichiers .tf
+Nous initialisons terraforme avec :
+
+terraform init
+
+On run la commande terraform plan pour faire une prévisualisation du déploiement avant le déploiement sur Azure
+avec terraform apply
+
+On génère ensuite la clé privée : ssh-keygen -t rsa -b 4096 -C "mattias.alvarez@efrei.net"
+
+Puis on la récupère avec la commande suivante : terraform output private_key_pem
+et on crée ensuite un fichier .pem pour créer le fichier .pem de la clé privée 
+
+
+Après avoir récupérer l'adresse IP publique de la machine virtuelle sur Azure on peut se connecter à la machine virtuelle :
+
+ssh -i id_rsa devops@{PUBLIC_ADDRESS_IP} cat /etc/os-release
+
+
+On supprime toutes les ressources déployées en exécutant la commande
+
+terraform destroy
+
+Bonus
+
+Lancer un script au démarrage de la machine qui install docker avec cloud-init
+Aucune duplication de code (utilisation de variables)
+Code Terraform correctement formater avec terraform fmt 
+
+Fin readme tp4 
+
+
+
+
+
 READ ME tp1 ALVAREZ MATTIAS
 
 Création du wrapper :
