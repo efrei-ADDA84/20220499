@@ -32,6 +32,8 @@ Lancer un script au démarrage de la machine qui install docker avec cloud-init
 Aucune duplication de code (utilisation de variables)
 Code Terraform correctement formater avec terraform fmt 
 
+Enfin, Terraform permet de déployer des infrastructures de manière reproductible et versionnée tel que des VM, offrant ainsi une gestion déclarative des ressources cloud( ici Azure). Cela simplifie les déploiements, assure la cohérence et facilite la gestion des modifications par rapport à une approche manuelle avec la CLI ou l'interface utilisateur.
+
 Fin readme tp4 
 
 
